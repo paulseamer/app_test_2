@@ -9,6 +9,9 @@ const height = 200 - margin.top - margin.bottom
 /* d3.histogram() function computes the binning and returns the coordinates of
 each bar. Bars can then be drawn using a classic .append("rect") */
 
+/* blob dir */
+const blobDir = 'https://paulseamer.github.io/app_test_2/'
+
 /* define axes - a 1D histogram only requires an x-axis */
 let xScale = d3.scaleLinear().range([margin.left, width])
 
@@ -172,7 +175,7 @@ function plotHsaGrps(projDat) {
 }
 
 /* initialise chart with data using hardcoded csv file name */
-d3.csv('https://strategyunit.blob.core.windows.net/population-aging-app/test_results_E08000026.csv').then(function (data) {
+d3.csv(blobDir + 'test_results_E08000026.csv').then(function (data) {
   /* group the data */
   let grpDat = d3.group(
     data,
@@ -308,7 +311,7 @@ d3.csv('https://strategyunit.blob.core.windows.net/population-aging-app/test_res
     selectedPod
   ) {
     /* get name of csv file from first dropdown */
-    let fileNm = 'data/d3_results_year_' + selectedArea + '.csv'
+    let fileNm = blobDir + 'test_results_' + selectedArea + '.csv'
 
     d3.csv(fileNm).then(function (data) {
       /* group the new data */
