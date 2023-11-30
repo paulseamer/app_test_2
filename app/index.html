@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Fira+Sans:wght@400;700&display=swap"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="div-header" id="selectors">
+      <p>Choose an area</p>
+      <!-- initialise a dropdown -->
+      <select class="selector" id="selectArea">
+        <option value="E08000026" selected>Coventry</option>
+        <option value="E07000235">Malvern Hills</option>
+        <option value="E09000030">Tower Hamlets</option>
+      </select>
+      <p>Choose a service type</p>
+      <!-- initialise a dropdown -->
+      <select class="selector" id="selectPod">
+        <option value="aae" selected>aae</option>
+        <option value="apc">apc</option>
+        <option value="opc">opc</option>
+      </select>
+      <p>Choose a model horizon</p>
+      <!-- initialise a dropdown -->
+      <select class="selector" id="selectHorizon">
+        <option value="2025" selected>2025</option>
+        <option value="2030">2030</option>
+        <option value="2035">2035</option>
+        <option value="2040">2040</option>
+      </select>
+      <!-- initialise a dropdown -->
+      <p>Choose a projection variant</p>
+      <select class="selector" id="selectProjVar">
+        <option value="1" selected>Principal</option>
+        <option value="2">Low fertility</option>
+        <option value="3">High fertility</option>
+        <option value="4">Low life expectancy</option>
+        <option value="5">High life expectancy</option>
+        <option value="6">Low migration</option>
+        <option value="7">High migration</option>
+        <option value="8">Low population</option>
+        <option value="9">High population</option>
+        <option value="10">Young age structure</option>
+        <option value="11">Old age structure</option>
+      </select>
+      <p>Show modelled change without adjustment for health-status</p>
+      <label class="switch">
+        <input type="checkbox" id="toggleHsa" unchecked />
+        <span class="toggle"></span>
+      </label>
+    </div>
+    <!-- create a div to hold plots -->
+    <div class="div-panel" id="small-multiples"></div>
+    <!-- JS -->
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
